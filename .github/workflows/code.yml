@@ -1,14 +1,11 @@
-name : code
-
-on: 
-    workflow_call:
-
+name: Code
+on:
+  workflow_call:
 jobs:
-    code-checkout:
-    runs-on: ubuntu-latest
-    
-    steps:
-        -name: clone the repo
-         uses: actions/checkout@v7
-        -name : print msg
-          runs: echo "code cloned
+  code-checkout:
+  runs-on: ubuntu-latest
+  steps:
+    - name: clone the repo
+      uses: actions/checkout@v7
+    - name: print msg
+    run: echo "code cloned"
