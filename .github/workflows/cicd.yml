@@ -1,0 +1,17 @@
+name: cicd
+
+on:
+      push:
+      
+jobs:
+      code:
+            uses: ./.github/workflows/code
+      build:
+            needs: code
+            uses: ./.github/workflows/build
+      test:
+            needs: build
+            uses: ./.github/workflows/test
+      deploy:
+            needs: test
+            uses: ./.github/workflows/deploy
