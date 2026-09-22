@@ -1,0 +1,11 @@
+name: test
+
+on:
+      workflow_call:   
+jobs:
+
+      build:
+            runs-on: ubuntu-latest
+            steps:
+                  -name :
+                  run: echo "code test using sonar"
